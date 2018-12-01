@@ -25,7 +25,7 @@ function msToTime(duration) {
  * Returns formatted current date
  * @returns {string}
  */
-function getCurrentTime(){
+function getCurrentTime( onlyTime = false ){
     var currentdate = new Date();
     var datetime = currentdate.getDate() + "/"
         + (currentdate.getMonth()+1)  + "/"
@@ -33,6 +33,12 @@ function getCurrentTime(){
         + currentdate.getHours() + ":"
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
+
+    if( onlyTime ) {
+        datetime = currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+    }
 
     return datetime;
 }
