@@ -73,3 +73,4 @@ function log( msg, type='info', prefix='', postfix='' ){
 module.exports.msToTime = msToTime;
 module.exports.strToMs = strToMs;
 module.exports.log = log;
+module.exports.getCurrentTime = getCurrentTime;
