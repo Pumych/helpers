@@ -18,7 +18,7 @@ function msToTime(duration) {
     const minutes = parseInt((duration / (1000 * 60)) % 60);
     const hours = parseInt((duration / (1000 * 60 * 60)) % 24);
 
-    return `${hours != 0 ? hours + 'h ' : ''}${minutes != 0 ? minutes + 'm ' : ''}${hours > 0 ? '' : seconds + 's'}`;
+    return `${hours != 0 ? Math.abs( hours ) + 'h ' : ''}${minutes != 0 ? Math.abs( minutes ) + 'm ' : ''}${hours > 0 ? '' : Math.abs( seconds ) + 's'}`;
 }
 
 /**
